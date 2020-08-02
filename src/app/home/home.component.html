@@ -1,0 +1,16 @@
+<ul *ngIf="userList.length > 0">
+    <li *ngFor="let user of userList">
+        {{user.name}}
+    </li>
+</ul>
+<ul *ngIf="userList.length == 0">
+    <li>
+        NO uSERS
+    </li>
+</ul>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label> Fisrt Name </label>
+    <input type="text" placeholder="FisrtName" formControlName="firstname">
+    <button type="submit"> Send </button>
+</form>
